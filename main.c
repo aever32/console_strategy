@@ -1,15 +1,9 @@
-#include <stdio.h>
-
 int main_menu() {
 
-    printf("#################\n");
-    printf("# Главное меню: #\n");
-    printf("#---------------#\n");
-    printf("# 1. Новая игра #\n");
-    printf("# 2. Сохранить  #\n");
-    printf("# 3. Загрузить  #\n");
-    printf("# 4. Выход      #\n");
-    printf("#################\n");
+    printf("Главное меню: \n##########\n");
+    printf("1. Новая игра\n");
+    printf("2. Загрузка\n");
+    printf("3. Выход\n##########\n");
 
     int choice = 0, num = 0;
 
@@ -24,9 +18,6 @@ int main_menu() {
                 break;
             case 3:
                 choice = 3;
-                break;
-            case 4:
-                choice = 4;
                 break;
             default:
                 printf("Попробуйте ещё...\n");
