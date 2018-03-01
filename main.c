@@ -1,6 +1,20 @@
 #include <stdio.h>
 
-int main_menu() {
+int main_menu(void);
+
+int main(int argc, char *argv[])
+{
+    // Вызов главного меню
+
+    int choice = main_menu();
+    printf("Test %d\n", choice);
+    
+    while
+
+    return 0;
+}
+
+int main_menu(void) {
 
     printf("#################\n"
            "# Главное меню: #\n"
@@ -36,14 +50,4 @@ int main_menu() {
         break;
     }
     return choice;
-}
-
-int main(int argc, char *argv[])
-{
-    // Вызов главного меню
-
-    int choice = main_menu();
-    printf("Test %d\n", choice);
-
-    return 0;
 }
