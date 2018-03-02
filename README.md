@@ -23,7 +23,7 @@ while( game_is_running ) {
         display_game();
     }
     
-#NCurses
+### NCurses
 Для вывода псевдографики в консоль используется библиотека NCurses.
 Для установки в Linux Ubuntu: sudo apt-get install libncurses5-dev
 
