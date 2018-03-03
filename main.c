@@ -1,51 +1,58 @@
 #include <stdio.h>
+#include <ncurses.h>
 
-int main_menu(void);
+void ShowMainMenu(void);
+int ChoiceMainMenu(void);
 
 int main(int argc, char *argv[])
 {
-    // Вызов главного меню
+    initscr(); // Инициализация ncurses
 
-    int choice = main_menu();
-    printf("Test %d\n", choice);
+    ShowMainMenu(); // Вызов главного меню
+    int choice = ChoiceMainMenu();
 
+    printw("Test %d\n", choice);
+    refresh(); //Обновление экрана
+
+    getch();
+    endwin();
     return 0;
 }
 
-int main_menu(void) {
+void ShowMainMenu(void) {
 
-    printf("#################\n"
-           "# Главное меню: #\n"
+    printw("#################\n"
+           "# Main menu:    #\n"
            "#---------------#\n"
-           "# 1. Новая игра #\n"
-           "# 2. Сохранить  #\n"
-           "# 3. Загрузить  #\n"
-           "# 4. Выход      #\n"
+           "# 1. New game   #\n"
+           "# 2. Save       #\n"
+           "# 3. Load       #\n"
+           "# 4. Out        #\n"
            "#################\n");
+    refresh();
+}
 
+int ChoiceMainMenu(void){
     int choice = 0, num = 0;
 
-    while(1) {
-        if (scanf("%d", &num) == 1) {
-            switch(num) {
-            case 1:
+    while(choice == 0) {
+        num = getch();
+        switch(num) {
+            case 49:        // code key "1"
                 choice = 1;
                 break;
-            case 2:
+            case 50:
                 choice = 2;
                 break;
-            case 3:
+            case 51:
                 choice = 3;
                 break;
-            case 4:
+            case 52:
                 choice = 4;
                 break;
             default:
-                printf("Попробуйте ещё...\n");
                 continue;
-            }
         }
-        break;
     }
     return choice;
 }
