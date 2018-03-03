@@ -8,8 +8,6 @@ int main(int argc, char *argv[])
 
     int choice = main_menu();
     printf("Test %d\n", choice);
-    
-    while
 
     return 0;
 }
