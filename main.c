@@ -39,7 +39,7 @@ void ShowMainMenu(void) {
     refresh();
 }
 
-int ChoiceMainMenu(void){
+int ChoiceMainMenu(void) {
     int choice = 0, num = 0;
 
     while(choice == 0) {
