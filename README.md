@@ -18,7 +18,7 @@
 ### Главный игровой цикл   
 _____________________________https://gamedev.ru/code/forum/?id=201239
 
-while( game_is_running ) {
+ while( game_is_running ) {
         update_game();
         display_game();
     }
