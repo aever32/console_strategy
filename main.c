@@ -4,6 +4,13 @@
 void ShowMainMenu(void);
 int ChoiceMainMenu(void);
 
+struct building {
+    unsigned int id;
+    char *name;
+    int life;
+    int energy;
+};
+
 int main(int argc, char *argv[])
 {
     initscr(); // Инициализация ncurses
